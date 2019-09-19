@@ -17,14 +17,16 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
-
+// Checks to see if requirements are met
 int myFunction(){
     
     string option = "Y";
     int amount = 0;
     string error = "no";
+// Where the user input is taken to see if they want to withdraw more
     while(option == "Y")
     {
+// Input validity check
         do
         {
             cout<<"Enter an amount"<<endl;
@@ -40,14 +42,13 @@ int myFunction(){
             }
         }
         while(amount >300 || amount<1);
-        
         cout<<"Would you like to go again(Y or N)?"<<endl;
         cin>>option;
     }
     
     return 0;
 }
-
+// This is where the # of bills are counted
 void billCounter(int amount){
     int one, five, ten, twenty, fifty;
         fifty= amount/50;
